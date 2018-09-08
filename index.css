@@ -1,11 +1,15 @@
 .container {
-    background-color: black;
-    color: white;
+     margin: 0;
+    background-color:white;
+    /*#ffebcd;*/
+    /*black;*/
+    color: grey;
 }
 
 body {
     display: block;
     margin: 8px;
+    /*background-color: #fffbf4;*/
 }
 .main-container {
     display: flex;
@@ -17,7 +21,7 @@ body {
     flex-flow: column wrap;
     border-width: 2px;
     border-style: solid;
-    border-color: white;
+    border-color: black;
     border-image: initial;
 }
 .container1-child {
@@ -27,7 +31,7 @@ body {
     justify-content: center;
     padding-left: 5em;
     padding-right: 2em;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid black;
     margin: 2em 2em 0px;
 }
 
@@ -45,12 +49,39 @@ body {
     margin-left: 10%;
     border-width: 2px;
     border-style: solid;
-    border-color: white;
+    border-color: black;
     border-image: initial;
 }
 
 nav {
     font-size: 1.5em;
     margin: 10px;
+    decoration:none; 
 }
 
+.header-display {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0;
+    background-color: #ffebcd;
+    /*#483d8b;*/
+    color:#483d8b;
+    height: 100px;
+}
+
+input[type="text"] {
+    display: inline-block;
+    /*background-color: whi;*/
+    color: white;
+    box-sizing: border-box;
+    width: 55%;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-image: initial;
+    border-radius: 4px;
+}
