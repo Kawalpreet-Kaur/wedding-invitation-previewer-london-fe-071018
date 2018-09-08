@@ -1,0 +1,56 @@
+.container {
+    background-color: black;
+    color: white;
+}
+
+body {
+    display: block;
+    margin: 8px;
+}
+.main-container {
+    display: flex;
+}
+.container1 {
+    display: flex;
+    width: 45%;
+    margin-left: 10%;
+    flex-flow: column wrap;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-image: initial;
+}
+.container1-child {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5em;
+    padding-right: 2em;
+    border-bottom: 2px solid white;
+    margin: 2em 2em 0px;
+}
+
+.container2-child {
+    display: inline-block;
+    width: 80%;
+    margin-left: 3em;
+    padding-left: 3em;
+    font-size: 20px;
+}
+
+.container-display {
+    display: flex;
+    width: 45%;
+    margin-left: 10%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-image: initial;
+}
+
+nav {
+    font-size: 1.5em;
+    margin: 10px;
+}
+
