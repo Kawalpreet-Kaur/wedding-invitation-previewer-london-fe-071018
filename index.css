@@ -21,9 +21,9 @@ body {
     width: 45%;
     /*margin-left: px;*/
     flex-flow: column wrap;
-    border-width: 2px;
-    border-style: solid;
-    border-color: black;
+    /*border-width: 2px;*/
+    /*border-style: solid;*/
+    /*border-color: black;*/
     border-image: initial;
 }
 .container1-child {
@@ -54,6 +54,8 @@ body {
     border-style: solid;
     border-color: black;
     border-image: initial;
+    /*background-color: black;*/
+    /*background-image: url("header.jpg");*/
 }
 
 nav a {
@@ -130,7 +132,7 @@ img{
 
 input[type="text"] {
     display: inline-block;
-    color: white;
+    color: grey;
     box-sizing: border-box;
     width: 55%;
     font-size: 20px;
