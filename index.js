@@ -51,6 +51,8 @@ document.getElementById('firstname').addEventListener('input',event=>{
   console.log(document.getElementById('initials'));
   document.getElementById('initials').innerHTML=initial.substring(0, 1).toUpperCase();
   document.getElementById('initials').innerHTML=document.getElementById('initials').innerHTML+' & ';
+  
+  
 })
 
 document.getElementById('secondname').addEventListener('input',event=>{

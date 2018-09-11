@@ -174,5 +174,7 @@ input[type="text"] {
 #sentence{
   margin-left: 0.5vw;
   /*margin-top: 300px;*/
+  top:400px;
   font-size: 35px;
+  position: absolute;
 }
