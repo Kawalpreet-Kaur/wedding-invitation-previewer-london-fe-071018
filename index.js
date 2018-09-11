@@ -6,9 +6,10 @@ console.log('theTarget', event.target);
 /*for style one*/
 document.getElementById('classic').addEventListener('click',event=>{
   console.log('event called');
-  styleSelected='classic'
+  styleSelected='classic' 
   let element= document.getElementsByClassName("container-display")[0];
   console.log('element=',element);
+  document.getElementById('initials').style.color = "blue";
 // element.setAttribute("style","background-color: blue");
 // element.style.backgroundColor = "blue"; /*--this also works*/
   element.style.backgroundImage="url('floral.jpg')";
@@ -39,7 +40,7 @@ document.getElementById('firstname').addEventListener('input',event=>{
   let initial=document.getElementById('firstname').value;
   console.log('value=',initial);
   console.log(document.getElementById('initials'));
-  document.getElementById('initials').innerHTML=initial;
+  document.getElementById('initials').innerHTML=initial.substring(0, 1);
   
 })
 
