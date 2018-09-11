@@ -41,7 +41,14 @@ document.getElementById('firstname').addEventListener('input',event=>{
   console.log('value=',initial);
   console.log(document.getElementById('initials'));
   document.getElementById('initials').innerHTML=initial.substring(0, 1);
-  
+})
+
+document.getElementById('secondname').addEventListener('input',event=>{
+  console.log('event input');
+  let initial=document.getElementById('secondname').value;
+  console.log('value=',initial);
+  console.log(document.getElementById('initials'));
+  document.getElementById('initials').innerHTML+=initial.substring(0, 1);
 })
 
 })
