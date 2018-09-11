@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
 function displaybackgrnds(input){
   styleSelected=input; 
   let element= document.getElementsByClassName("container-display")[0];
-  console.log("url('`${input}`.jpg')");
-  element.style.backgroundImage="url('`${input}`.jpg')";
+  console.log("url('floral.jpg')");
+  element.style.backgroundImage="url(floral.jpg')";
 }
 
 let styleSelected='classic';
@@ -17,10 +17,11 @@ document.getElementById('classic').addEventListener('click',event=>{
   let element= document.getElementsByClassName("container-display")[0];
   console.log('element=',element);
   document.getElementById('initials').style.color = "blue";
-  displaybackgrnds('classic');
+  document.getElementById('sentence').style.color = "blue";
+  // displaybackgrnds('classic');
 // element.setAttribute("style","background-color: blue");
 // element.style.backgroundColor = "blue"; /*--this also works*/
-  // element.style.backgroundImage="url('classic.jpg')";
+  element.style.backgroundImage="url('classic.jpg')";
 // element.setAttribute("style","background-image: url('background1.jpg')");
 })
 
