@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", (e) => {
 
+
+
 function displaybackgrnds(input){
   styleSelected=input; 
   let element= document.getElementsByClassName("container-display")[0];
