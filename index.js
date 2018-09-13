@@ -86,10 +86,15 @@ different.addEventListener('click',event=>{
       }
   })
 
-firstname.addEventListener('input',event=>{
-    initials.innerHTML=firstname.value.substring(0, 1).toUpperCase();
-    initials.innerHTML=initials.innerHTML+' & ';
-    names.innerHTML=firstname.value;
-  })
+  lastname.addEventListener('input',event=>{
+      lastname.innerHTML=lastname.value;
+    })
 
+  Weddingdate.addEventListener('input',event=>{
+        Weddingdate.innerHTML=Weddingdate.value;
+    })
+    
+  location.addEventListener('input',event=>{
+        location.innerHTML=location.value;
+    })  
 })
