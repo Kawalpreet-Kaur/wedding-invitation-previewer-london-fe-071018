@@ -1,48 +1,53 @@
 document.addEventListener("DOMContentLoaded", (e) => {
+const images={
+  'classic': 'classic.jpg',
+  'formal' :  'formal.jpg',
+  'different': 'funky.jpg'
+  };
+  
+  const style={
+  'classic': {
+  'color': 'blue'
+  },
+  'formal':{'color':'lightpink'},
+  'different':{'color':'white'}
+  };
+const containerDisplay=document.getElementsByClassName("container-display")[0];
 
-
+const classic=document.getElementById('classic');
+const formal=document.getElementById('formal');
+const diferent=document.getElementById('diferent');
+const initials=document.getElementById('initials');
+const sentence= document.getElementById('sentence');
 
 function displaybackgrnds(input){
   styleSelected=input; 
-  let element= document.getElementsByClassName("container-display")[0];
-  console.log("url('floral.jpg')");
-  element.style.backgroundImage="url(floral.jpg')";
+  containerDisplay.style.backgroundImage=`url(${images[input]})`;
+  initials.style.color = style[input].color;
+  sentence.style.color = style[input].color;
 }
 
 let styleSelected='classic';
-document.getElementsByClassName("container-display")[0].style.backgroundImage="url('classic.jpg')";
+containerDisplay.style.backgroundImage="url('classic.jpg')";
 console.log('theTarget', event.target);
+
+
 /*for style one*/
-document.getElementById('classic').addEventListener('click',event=>{
-  console.log('event called');
-  styleSelected='classic' 
-  let element= document.getElementsByClassName("container-display")[0];
-  console.log('element=',element);
-  document.getElementById('initials').style.color = "blue";
-  document.getElementById('sentence').style.color = "blue";
-  // displaybackgrnds('classic');
-// element.setAttribute("style","background-color: blue");
-// element.style.backgroundColor = "blue"; /*--this also works*/
-  element.style.backgroundImage="url('classic.jpg')";
-// element.setAttribute("style","background-image: url('background1.jpg')");
+  classic.addEventListener('click',event=>{
+  styleSelected='classic' ;
+  displaybackgrnds(styleSelected);
 })
 
 /*for style two*/
-document.getElementById('spring').addEventListener('click',event=>{
-  console.log('event called');
-  let element= document.getElementsByClassName("container-display")[0];
+formal.addEventListener('click',event=>{
   console.log('element=',element);
-  styleSelected='spring';
-  element.style.backgroundImage="url('floral.jpg')";
+  styleSelected='formal';
 })
 
 /*for style three*/
-document.getElementById('different').addEventListener('click',event=>{
-  console.log('event called');
+different.addEventListener('click',event=>{
   styleSelected='different';
-  let element= document.getElementsByClassName("container-display")[0];
-  console.log('element=',element);
-  element.style.backgroundImage="url('floral.jpg')";
+  displaybackgrnds(styleSelected);
 })
 
 /*for inputs*/
