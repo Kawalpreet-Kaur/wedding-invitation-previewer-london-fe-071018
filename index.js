@@ -12,11 +12,24 @@ const images={
   };
 const containerDisplay=document.getElementsByClassName("container-display")[0];
 
+//form details
 const classic=document.getElementById('classic');
 const formal=document.getElementById('formal');
 const diferent=document.getElementById('diferent');
+const firstname=document.getElementById('firstname');
+const secondname=document.getElementById('secondname');
+const lastname=document.getElementById('lastname');
+const date=document.getElementById('date');
+const WeddingLocation=document.getElementById('WeddingLocation');
+
+//display details
 const initials=document.getElementById('initials');
 const sentence= document.getElementById('sentence');
+const names=document.getElementById('names');
+const displayLastname=document.getElementById('displayLastname');
+const Weddingdate=document.getElementById('Weddingdate');
+const location=document.getElementById('location');
+
 
 function displaybackgrnds(input){
   styleSelected=input; 
@@ -27,10 +40,7 @@ function displaybackgrnds(input){
   sentence.style.color = style[input].color;
 }
 
-let styleSelected='classic';
-containerDisplay.style.backgroundImage="url('classic.jpg')";
-console.log('theTarget', event.target);
-
+displaybackgrnds('classic');
 
 /*for style one*/
   classic.addEventListener('click',event=>{
@@ -52,32 +62,34 @@ different.addEventListener('click',event=>{
 })
 
 /*for inputs*/
-document.getElementById('firstname').addEventListener('input',event=>{
-  console.log('event input');
-  let initial=document.getElementById('firstname').value;
-  console.log('value=',initial);
-  console.log(document.getElementById('initials'));
-  document.getElementById('initials').innerHTML=initial.substring(0, 1).toUpperCase();
-  document.getElementById('initials').innerHTML=document.getElementById('initials').innerHTML+' & ';
-  
-  
-})
+  firstname.addEventListener('input',event=>{
+    initials.innerHTML=firstname.value.substring(0, 1).toUpperCase();
+    initials.innerHTML=initials.innerHTML+' & ';
+    names.innerHTML=firstname.value;
+  })
 
-document.getElementById('secondname').addEventListener('input',event=>{
-  console.log('event input');
-  let initial=document.getElementById('secondname').value;
-  let value=document.getElementById('initials').innerHTML;
-  console.log('value=',initial);
-  console.log(document.getElementById('initials'));
-  if (initial.length===1) {
-  document.getElementById('initials').innerHTML=
-  value+initial.substring(0, 1).toUpperCase();
-  }
-  
-  if (initial.length===0) {
-    document.getElementById('initials').innerHTML=document.getElementById('initials').innerHTML.substring(0, 1)
-  }
-  
-})
+  secondname.addEventListener('input',event=>{
+      let value=initials.innerHTML;
+      if (secondname.value.length===1) {
+        initials.innerHTML=
+        value+secondname.value.toUpperCase();
+        names.innerHTML=names.innerHTML+' & ';
+      }
+      if (secondname.value.length===0) {
+        initials.innerHTML=initials.innerHTML.substring(0, 1)
+      }
+      if (secondname.value.length>=1) {
+        console.log('length=',secondname.value.length);
+        console.log('value=',secondname.value);
+        console.log('value=',secondname.value.slice((secondname.value.length)-1));
+       names.innerHTML=names.innerHTML+secondname.value.slice(secondname.value.length-1);
+      }
+  })
+
+firstname.addEventListener('input',event=>{
+    initials.innerHTML=firstname.value.substring(0, 1).toUpperCase();
+    initials.innerHTML=initials.innerHTML+' & ';
+    names.innerHTML=firstname.value;
+  })
 
 })
