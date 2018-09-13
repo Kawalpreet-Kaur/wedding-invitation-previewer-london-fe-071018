@@ -33,11 +33,11 @@ const location=document.getElementById('location');
 
 function displaybackgrnds(input){
   styleSelected=input; 
-  console.log(input);
-  console.log(`${images[input]}`);
+  // document.getElementsByTagName("form")[0].classList.add("active");
   containerDisplay.style.backgroundImage=`url(${images[input]})`;
   initials.style.color = style[input].color;
   sentence.style.color = style[input].color;
+  names.style.color = style[input].color;
   displayLastname.style.color = style[input].color;
   Weddingdate.style.color = style[input].color;
   location.style.color = style[input].color;
