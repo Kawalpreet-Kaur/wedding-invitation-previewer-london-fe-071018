@@ -1,14 +1,12 @@
 document.addEventListener("DOMContentLoaded", (e) => {
 const images={
   'classic': 'classic.jpg',
-  'formal' :  'formal.jpg',
+  'formal': 'formal1.jpg',
   'different': 'funky.jpg'
   };
   
   const style={
-  'classic': {
-  'color': 'blue'
-  },
+  'classic': {'color': 'blue' },
   'formal':{'color':'lightpink'},
   'different':{'color':'white'}
   };
@@ -22,6 +20,8 @@ const sentence= document.getElementById('sentence');
 
 function displaybackgrnds(input){
   styleSelected=input; 
+  console.log(input);
+  console.log(`${images[input]}`);
   containerDisplay.style.backgroundImage=`url(${images[input]})`;
   initials.style.color = style[input].color;
   sentence.style.color = style[input].color;
@@ -40,8 +40,9 @@ console.log('theTarget', event.target);
 
 /*for style two*/
 formal.addEventListener('click',event=>{
-  console.log('element=',element);
   styleSelected='formal';
+  console.log(styleSelected);
+   displaybackgrnds(styleSelected);
 })
 
 /*for style three*/
