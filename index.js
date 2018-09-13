@@ -38,6 +38,9 @@ function displaybackgrnds(input){
   containerDisplay.style.backgroundImage=`url(${images[input]})`;
   initials.style.color = style[input].color;
   sentence.style.color = style[input].color;
+  displayLastname.style.color = style[input].color;
+  Weddingdate.style.color = style[input].color;
+  location.style.color = style[input].color;
 }
 
 displaybackgrnds('classic');
@@ -87,14 +90,14 @@ different.addEventListener('click',event=>{
   })
 
   lastname.addEventListener('input',event=>{
-      lastname.innerHTML=lastname.value;
+      displayLastname.innerHTML=lastname.value;
     })
 
-  Weddingdate.addEventListener('input',event=>{
-        Weddingdate.innerHTML=Weddingdate.value;
+  date.addEventListener('input',event=>{
+        Weddingdate.innerHTML=date.value;
     })
     
-  location.addEventListener('input',event=>{
-        location.innerHTML=location.value;
+  WeddingLocation.addEventListener('input',event=>{
+        location.innerHTML=WeddingLocation.value;
     })  
 })
